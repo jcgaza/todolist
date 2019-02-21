@@ -20,7 +20,8 @@ export class ToDoList extends LitElement {
   }
 
   connectedCallback() {
-    database.ref("tasks").on("value", snapshot => {
+    const ref = database.ref("tasks");
+    ref.on("value", snapshot => {
       Object.values(snapshot.val()).map((task, id) => {
         this.list.push({ id, title: task.title });
       });

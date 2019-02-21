@@ -2,6 +2,7 @@
 
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const Dotenv = require("dotenv-webpack");
 const webpack = require("webpack");
 
 module.exports = {
@@ -66,6 +67,7 @@ module.exports = {
       chunkFilename: "[id].css",
     }),
     new webpack.HotModuleReplacementPlugin(),
+    new Dotenv(),
   ],
   devServer: {
     stats: "errors-only",
