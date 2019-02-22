@@ -4,16 +4,16 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const Dotenv = require("dotenv-webpack");
 const webpack = require("webpack");
+const path = require("path");
 
 module.exports = {
-  entry: [
-    require.resolve("webpack-dev-server/client"),
-    require.resolve("webpack/hot/dev-server"),
-    "./src/app.js",
-  ],
+  entry: {
+    app: path.resolve(__dirname, "../src/", "app.js"),
+  },
   output: {
-    path: __dirname + "/../dist",
-    filename: "bundle.js",
+    path: path.resolve(__dirname, "../", "dist"),
+    publicPath: "/",
+    filename: "[name].js",
   },
   mode: "production",
   module: {
@@ -56,9 +56,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       inject: true,
-      filename: "index.html",
-      template: "./src/index.html",
-
+      filename: path.join(".", "dist", "index.html"),
+      template: path.resolve(".", "src", "index.html"),
       title: "To-do List",
     }),
     new MiniCssExtractPlugin({
@@ -67,4 +66,5 @@ module.exports = {
     }),
     new Dotenv(),
   ],
+  devtool: "source-map",
 };

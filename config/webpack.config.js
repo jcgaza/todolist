@@ -59,7 +59,6 @@ module.exports = {
       inject: true,
       filename: "index.html",
       template: "./src/index.html",
-
       title: "To-do List",
     }),
     new MiniCssExtractPlugin({
