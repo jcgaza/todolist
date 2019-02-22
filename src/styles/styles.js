@@ -1,18 +1,6 @@
 import { css } from "lit-element";
 
 export const styles = css`
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: "Roboto", sans-serif;
-    background: #f2f2f2;
-    height: auto;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
   .container {
     display: flex;
     justify-content: center;

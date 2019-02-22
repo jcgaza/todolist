@@ -8,12 +8,12 @@ const path = require("path");
 
 module.exports = {
   entry: {
-    app: path.resolve(__dirname, "../src/", "app.js"),
+    app: __dirname + "/../src/app.js",
   },
   output: {
-    path: path.resolve(__dirname, "../", "dist"),
+    path: __dirname + "/../dist",
     publicPath: "/",
-    filename: "[name].js",
+    filename: "bundle.js",
   },
   mode: "production",
   module: {
@@ -55,9 +55,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       hash: true,
-      inject: true,
-      filename: path.join(".", "dist", "index.html"),
-      template: path.resolve(".", "src", "index.html"),
+      filename: __dirname + "/../dist/index.html",
+      template: __dirname + "/../src/index.html",
       title: "To-do List",
     }),
     new MiniCssExtractPlugin({

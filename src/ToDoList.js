@@ -70,7 +70,7 @@ export class ToDoList extends LitElement {
                 `
               : this.list.length > 0
               ? this.list.map(
-                  (task, key) =>
+                  task =>
                     html`
                       <to-do-task
                         title=${task.title}
