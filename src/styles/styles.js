@@ -7,12 +7,11 @@ export const styles = css`
     align-items: center;
     font-family: "Roboto", sans-serif;
     background: white;
+    border-radius: 10px;
   }
 
   .todo {
-    border: 1px solid #b0b0b0;
     width: 600px;
-    border-radius: 1%;
     padding: 20px;
   }
 
@@ -27,7 +26,7 @@ export const styles = css`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid #f0f0f0;
+    border: 1px solid #dddddd;
     width: 600px;
     padding: 10px;
     margin-bottom: 5px;
@@ -35,7 +34,7 @@ export const styles = css`
   }
 
   .task-delete {
-    border: 1px solid #f0f0f0;
+    border: 1px solid #dddddd;
     background: transparent;
     border-radius: 10px;
     padding: 10px;
@@ -49,7 +48,7 @@ export const styles = css`
   }
 
   .add-task-button {
-    border: 1px solid #f0f0f0;
+    border: 1px solid #dddddd;
     background: transparent;
     border-radius: 10px;
     padding: 10px;
@@ -57,7 +56,7 @@ export const styles = css`
   }
 
   .add-task-input {
-    border: 1px solid #f0f0f0;
+    border: 1px solid #dddddd;
     height: 30px;
     width: 400px;
     margin-right: 10px;
@@ -68,6 +67,11 @@ export const styles = css`
   .add-task-input:focus {
     outline: none;
     border: 1px solid #008080;
+    height: 30px;
+    width: 400px;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 10px;
   }
 
   h1 {
@@ -75,6 +79,6 @@ export const styles = css`
   }
 
   .input-task {
-    border: 1px solid #b0b0b0;
+    border: 1px solid #dddddd;
   }
 `;

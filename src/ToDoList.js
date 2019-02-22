@@ -47,11 +47,13 @@ export class ToDoList extends LitElement {
   async onClick(e) {
     e.preventDefault();
     const ref = database.ref("tasks");
-    await ref.push({
-      title: this.taskName,
-    });
+    if (this.taskName.length > 0) {
+      await ref.push({
+        title: this.taskName,
+      });
 
-    this.taskName = "";
+      this.taskName = "";
+    }
   }
 
   onInputTask(e) {
