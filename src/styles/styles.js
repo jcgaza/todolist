@@ -1,6 +1,18 @@
 import { css } from "lit-element";
 
 export const styles = css`
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    background: #f2f2f2;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .container {
     display: flex;
     justify-content: center;
@@ -31,10 +43,14 @@ export const styles = css`
     width: 600px;
     padding: 10px;
     margin-bottom: 5px;
+    border-radius: 5px;
   }
 
-  .task-title {
-    justify-content: flex-start;
+  .task-delete {
+    border: 1px solid #f0f0f0;
+    background: transparent;
+    border-radius: 10px;
+    padding: 10px;
   }
 
   .add-task {
@@ -42,6 +58,28 @@ export const styles = css`
     justify-content: center;
     align-items: center;
     margin: 10px;
+  }
+
+  .add-task-button {
+    border: 1px solid #f0f0f0;
+    background: transparent;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100px;
+  }
+
+  .add-task-input {
+    border: 1px solid #f0f0f0;
+    height: 30px;
+    width: 400px;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .add-task-input:focus {
+    outline: none;
+    border: 1px solid #008080;
   }
 
   h1 {

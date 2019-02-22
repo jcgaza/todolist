@@ -22,7 +22,6 @@ export class ToDoTask extends LitElement {
   }
 
   onDelete(e) {
-    console.log(this.key);
     database.ref(`tasks/${this.key}`).set(null);
   }
 
